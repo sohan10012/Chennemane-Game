@@ -18,7 +18,7 @@ const Pit = ({ seeds, index, onClick, isPlayable, owner, isHighlighted, justSown
         <div
             onClick={isPlayable ? onClick : undefined}
             className={clsx(
-                "relative w-20 h-20 rounded-full shadow-inner transform transition-all duration-300",
+                "relative w-12 h-12 md:w-20 md:h-20 rounded-full shadow-inner transform transition-all duration-300",
                 owner === 'P1' ? 'mb-2' : 'mt-2',
                 isPlayable ? 'cursor-pointer hover:scale-105 ring-2 ring-amber-200' : 'opacity-90',
                 isHighlighted || justSown ? 'ring-4 ring-yellow-400' : '',

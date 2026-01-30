@@ -170,9 +170,9 @@ const Board = ({ initialMode = 'PVC', onBack }) => {
                 <div className="absolute inset-0 rounded-[2.5rem] opacity-30 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] bg-repeat mix-blend-soft-light"></div>
                 <div className="absolute inset-0 rounded-[2.5rem] shadow-[inset_0_0_80px_rgba(0,0,0,0.6)] pointer-events-none" />
 
-                <div className="gap-6 flex flex-col relative z-10 w-full overflow-x-auto pb-6 md:pb-0 px-4 scrollbar-hide">
+                <div className="gap-6 flex flex-col relative z-10 w-full overflow-x-auto pb-6 md:pb-0 px-2 md:px-4 scrollbar-hide touch-pan-x">
                     {/* TOP ROW (P2) */}
-                    <div className="flex gap-3 md:gap-5 justify-center min-w-max">
+                    <div className="flex gap-2 md:gap-5 justify-center min-w-max">
                         {topRow.map((seeds, i) => {
                             const originalIndex = 13 - i;
                             return (
@@ -196,7 +196,7 @@ const Board = ({ initialMode = 'PVC', onBack }) => {
                     </div>
 
                     {/* BOTTOM ROW (P1) */}
-                    <div className="flex gap-3 md:gap-5 justify-center min-w-max">
+                    <div className="flex gap-2 md:gap-5 justify-center min-w-max">
                         {bottomRow.map((seeds, originalIndex) => (
                             <Pit
                                 key={originalIndex}
